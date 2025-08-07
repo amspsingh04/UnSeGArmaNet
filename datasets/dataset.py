@@ -9,7 +9,6 @@ class Dataset:
         if dataset not in ["CUB", "ECSSD", "DUTS", "CUSTOM"]:
             raise ValueError(f'Dataset: {dataset} is not supported')
         self.dataset = dataset
-
         if dataset == "CUB":
             self.images, self.masks = load_cub()
         elif dataset == "ECSSD":
